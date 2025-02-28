@@ -10,7 +10,7 @@ pipeline {
         // Define Docker Hub credentials and Kubernetes settings
         DOCKER_HUB_CREDENTIALS = 'docker-cred' // Jenkins credentials ID for Docker Hub
         DOCKER_IMAGE = 'ravi011/register-app' // Docker Hub username and repository
-        KUBE_CONFIG = '/home/ubuntu/.kube/config' // Path to your kubeconfig for Kubernetes access
+        KUBE_CONFIG = 'ls -lah ~/.kube/config' // Path to your kubeconfig for Kubernetes access
     }
 
     stages {
