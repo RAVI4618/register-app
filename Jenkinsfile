@@ -60,7 +60,9 @@ pipeline {
                 script {
                     // Set up Kubernetes access and deploy to "test" namespace
                     // sh 'kubectl --kubeconfig=${KUBE_CONFIG} apply -f /home/ubuntu/dep/deploy.yaml'
-                    sh 'kubectl --kubeconfig=${env.KUBE_CONFIG} apply -f /var/lib/jenkins/deploy.yaml'
+                    // sh 'kubectl --kubeconfig=${env.KUBE_CONFIG} apply -f /var/lib/jenkins/deploy.yaml'
+                    sh 'bash -c "kubectl --kubeconfig=${KUBE_CONFIG} apply -f /var/lib/jenkins/deploy.yaml"'
+
 
                 }
             }
