@@ -60,7 +60,9 @@ pipeline {
                 script {
                     // Set up Kubernetes access and deploy to "test" namespace
                     sh 'kubectl --kubeconfig=${KUBE_CONFIG} apply -f /home/ubuntu/dep/deploy.yaml'
+                }
             }
         }
-    }
-}
+    } // <-- Closing bracket for 'stages'
+
+} // <-- Closing bracket for 'pipeline'
